@@ -1,6 +1,6 @@
 
-$('.navigation-header').load('https://robbie.dev.matrix.msu.edu/~christj2/squareone/header.html');
-$('#footer').load('https://robbie.dev.matrix.msu.edu/~christj2/squareone/footer.html');
+$('.navigation-header').load('https://christj2.github.io/squareone/header.html');
+$('#footer').load('https://christj2.github.io/squareone/footer.html');
 
 $(window).scroll(function() {
     slideBackgrounImages();
