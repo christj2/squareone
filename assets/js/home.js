@@ -24,15 +24,16 @@ $(window).scroll(function() {
 function slideBackgrounImages(){
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
+    var offset = 200;
+    if($('.dropdown-menu').is(':visible')){
+        offset = 100;
+        $('.sliding-image-container').css('height','100px');
+    }else{
+        $('.sliding-image-container').css('height','200px');
+    }
     $('.sliding-image').each(function(){
         var elementTop = $(this).offset().top;
         var fraction = (elementTop-viewportTop)/(viewportBottom - viewportTop);
-        var offset = 200;
-        $('.sliding-image-container').css('height','200px');
-        if($('.dropdown-menu').is(':visible')){
-            offset = 100;
-            $('.sliding-image-container').css('height','100px');
-        }
         var slide = ($(this).height()-offset) * fraction;
         if( $(this).is(':animated') ) {
             $(this).finish();
