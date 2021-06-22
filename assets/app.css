@@ -1,0 +1,464 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+.tint {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.background-img{
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-image: url(https://robbie.dev.matrix.msu.edu/~christj2/squareone/assets/images/background-dark.jpg)
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-family: Arial;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hide {
+  display: none;
+}
+
+.arrow-up {
+  transform: scaleY(-1);
+}
+
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 80%;
+  margin: 0 10%;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+}
+.fixed-header{
+    transition: top 0.3s;
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid grey;
+}
+.fixed-link{
+    color: black!important;
+}
+.navigation-header .hamburger {
+    margin-top: 15px;
+    height: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.navigation-header .down-arrow {
+  width: 30px;
+  height: 56px;
+  margin-left: -7px;
+  transition: 0.2s ease-out;
+}
+.navigation-header .left-section {
+  text-decoration: none;
+  color: inherit;
+  display: table;
+}
+.navigation-header .left-section .domain-name {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px;
+}
+.navigation-header .left-section .logo-link {
+  height: 80px;
+}
+.navigation-header .right-section {
+  list-style-type: none;
+  margin-right: 20px;
+}
+.navigation-header .right-section li {
+  display: inline-table;
+  height: 100%;
+}
+.navigation-header .right-section li .nav-link {
+  text-decoration: none;
+  color: inherit;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0px 5px;
+}
+.navigation-header .right-section li .nav-link .order-online {
+    background-color: #004900;
+    padding: 10px 14px;
+    border-radius: 20px;
+}
+.about{
+    margin: 5px 10% 0px 10%;
+    background-color: white;
+    text-align: center;
+    padding: 5% 10%;
+}
+
+.about h2{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #004900;
+    font-family: sans-serif;
+}
+
+.about p{
+    line-height: 30px;
+    color: #30271c;
+}
+
+.sliding-image-container{
+    margin: 0px 10%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.sliding-image{
+    width: 100%;
+    position: relative;
+}
+
+.pictures{
+    margin: 0px 10%;
+    height: 400px;
+    background-color: rgb(255,255,255,1);
+    padding: 2% 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.tile-container{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 1;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.pictures1{
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pictures2{
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pictures3{
+    display: inline-block;
+    height: 49%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pictures4{
+    display: inline-block;
+    height: 49%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tile-spacer {
+    height: 100%;
+    display: inline-block;
+    width: 3%;
+}
+
+.title {
+  padding: 85px 10% 40px 10%;
+  text-align: center;
+}
+
+.title .logo-link{
+    width: 100%;
+}
+
+.menutitle{
+    margin: 85px 10% 0px 10%;
+    background-color: white;
+    padding: 5% 10%;
+    color: Black;
+    text-align: left;
+}
+
+.menutitle h2{
+    margin: 0;
+}
+
+.menutitle p{
+    margin-top: 20px;
+}
+
+.menutitle .food-sub-item{
+    color: inherit;
+    cursor: pointer;
+}
+
+.menutitle iframe{
+    width: 100%;
+}
+
+.menumenu{
+    background-color: #f2f0ea;
+    margin-top: 0px;
+}
+
+.menumenu h2{
+    color: black;
+    border-bottom: 3px solid #004900;
+    padding-bottom: 14px;
+    width: 91px;
+    margin-bottom: 40px;
+}
+
+.menumenu h3{
+    color: black;
+    font-size: 1.17em;
+    display: inline-block;
+}
+
+.menumenu .item-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menumenu .divider{
+    display: inline-block;
+    flex-grow: 1;
+    border-bottom: 1px dashed lightgrey;
+    margin: 3px 13px;
+}
+
+.menumenu .item-description{
+    margin-top: 6px;
+    line-height: initial;
+    width: 80%;
+    margin-bottom: 22px;
+    color: #30271c;
+}
+
+.chef{
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.chef-image{
+    transform: scaleX(-1);
+    height: 400px;
+    margin-left: -10%;
+}
+
+.chef-about{
+    display: inline-block;
+    color: black;
+    font-size: 1.17em;
+}
+
+.chef-container{
+    margin: 50px 0px;
+}
+
+.chef-right{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 46%;
+    padding-top: 40px;
+    margin-left: 10px;
+}
+
+.about-restaurant{
+    margin-bottom: 50px;
+    color: #30271c;
+}
+
+.whitespace{
+    white-space: pre-line;
+    vertical-align: top;
+    display: inline-block;
+    margin: 30px;
+}
+
+#footer{
+    background-color: rgb(0,0,0,0.7);
+    margin: 0px 10%;
+    margin-bottom: 40px;
+}
+
+#footer .footer-header{
+    margin-bottom: 10px;
+    font-size: 1.17em;
+    font-family: sans-serif;
+    color: #004900;
+    font-weight: 800;
+}
+
+#footer .day{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .day-time{
+    color: #acacac;
+}
+
+.latest-reviews {
+  text-align: center;
+}
+.latest-reviews h2 {
+  padding-right: 345px;
+}
+.latest-reviews h2 .left-align-header {
+  width: 70px;
+  margin: 0 auto;
+  padding: 15px;
+  cursor: pointer;
+  text-align: left;
+}
+.latest-reviews h2 .left-align-header #sortBy {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.latest-reviews h2 .left-align-header .down-arrow {
+  position: absolute;
+  margin-left: 3px;
+  height: 20px;
+  margin-top: -1px;
+}
+.latest-reviews h2 .left-align-header .sort-by-menu {
+  position: absolute;
+  background-color: #303030;
+  margin-left: -8px;
+  display: none;
+  padding-top: 15px;
+}
+.latest-reviews h2 .left-align-header .sort-by-menu li {
+  padding: 10px;
+}
+.latest-reviews .lastest-review-link {
+  text-decoration: none;
+  border-bottom: 1px white solid;
+  height: 82.5px;
+  width: 400px;
+  display: block;
+  margin: 15px auto;
+  padding-bottom: 15px;
+}
+.latest-reviews .lastest-review-link .lastest-review-img {
+  width: 150px;
+  height: 82.5px;
+  float: left;
+}
+.latest-reviews .lastest-review-link .latest-review-title {
+  display: block;
+  padding-top: 10px;
+}
+
+.browse-reviews {
+  padding: 119px 10% 40px 10%;
+}
+
+@media screen and (max-width: 716px) {
+  .navigation-header .dropdown-menu {
+    display: block;
+  }
+  .navigation-header .right-section {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 85px;
+    padding: 20px;
+    text-align: right;
+    background-color: #ffffff;
+    margin-right: 0px;
+    padding-right: 30px;
+    border: 1px solid grey;
+    border-right: none;
+  }
+  .navigation-header .right-section .order-nav-item {
+      margin-right: -15px;
+  }
+  .navigation-header .right-section li {
+    display: block;
+    padding: 10px 0px;
+  }
+  .navigation-header .right-section li .nav-link {
+    display: block;
+    text-align: right;
+    color: black;
+  }
+  .navigation-header .right-section .search-box {
+    width: auto !important;
+    margin-bottom: 30px;
+  }
+}
