@@ -27,7 +27,13 @@ function slideBackgrounImages(){
     $('.sliding-image').each(function(){
         var elementTop = $(this).offset().top;
         var fraction = (elementTop-viewportTop)/(viewportBottom - viewportTop);
-        var slide = ($(this).height()-200) * fraction;
+        var offset = 200;
+        $('.sliding-image-container').css('height','200px');
+        if($('.dropdown-menu').is(':visible')){
+            offset = 100;
+            $('.sliding-image-container').css('height','100px');
+        }
+        var slide = ($(this).height()-offset) * fraction;
         if( $(this).is(':animated') ) {
             $(this).finish();
         }
