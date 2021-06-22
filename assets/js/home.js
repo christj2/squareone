@@ -113,3 +113,5 @@ function triggerScrolls(){
     $(window).resize();
     $(window).scroll();
 }
+
+triggerScrolls();
